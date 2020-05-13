@@ -188,6 +188,7 @@ class AudioRecorderManager extends ReactContextBaseJavaModule {
 
   @ReactMethod
   public void startRecording(Promise promise){
+     try {
     if (recorder == null){
       logAndRejectPromise(promise, "RECORDING_NOT_PREPARED", "Please call prepareRecordingAtPath before starting recording");
       return;
@@ -204,6 +205,9 @@ class AudioRecorderManager extends ReactContextBaseJavaModule {
     isPaused = false;
     startTimer();
     promise.resolve(currentOutputFile);
+  }catch(Exception e) {
+      logAndRejectPromise(promise, "INVALID_STATE", "There was an error using your microphone");
+    }
   }
 
   @ReactMethod
