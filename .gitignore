@@ -31,6 +31,14 @@ node_modules/
 npm-debug.log
 
 android/gradle/
+android/captures/
+android/build/
 android/gradlew
 android/gradlew.bat
+android/*.iml
+android/.gradle/
+android/.idea/
+android/local.properties
+gradle.properties
+
 .idea
