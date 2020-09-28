@@ -340,6 +340,9 @@ class AudioRecorderManager extends ReactContextBaseJavaModule {
   }
 
   private void logAndRejectPromise(Promise promise, String errorCode, String errorMessage) {
+    if (errorMessage == null) {
+      errorMessage = "Error with null message in AudioRecorderManager";
+    }
     Log.e(TAG, errorMessage);
     promise.reject(errorCode, errorMessage);
   }
