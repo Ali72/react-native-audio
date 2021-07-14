@@ -7,7 +7,7 @@
   "files": [
     "ios/AudioRecorderManager.m",
     "ios/AudioRecorderManager.h",
-    "ios/RNAudio.xcodeproj",
+    "ios/RNAudio.xcodeproj/",
     "README.md",
     "LICENSE",
     "index.js",
